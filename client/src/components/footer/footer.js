@@ -1,19 +1,18 @@
-import React, { Component } from 'react';
+import "./footer.css"
+function Footer(props) {
+    return (
 
-class Footer extends Component {
-    render() { 
-        return (
-            <div>
+        <div className="listGroup">
                 <ul>
-                 <li><a href='https://www.facebook.com'>Facebook</a></li>
+                <li><a href='https://www.facebook.com'>Facebook</a></li>
                  <li><a href='https://github.com/Abdliswi'>Github</a></li>
                  <li><a href='https://www.linkedin.com/in/abd-alhameed-liswi-a78853110/'>LinkedIn</a></li>
+                 <p className="para">&copy; Abd Alhameed</p>
 
                 </ul>
-                <p>Abd Alhameed</p>
-            </div>
-        );
-    }
+        </div>
+
+    );
 }
 
 export default Footer;

@@ -1,13 +1,24 @@
-import React from 'react';
 import Home from './components/home/home';
+import './App.css';
+import TourDetails from './components/tourDetails/TourDetails';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/header/header';
 
-export default function App() {
+
+function App() {
   return (
-    <div>
-      <Home />
-    </div>
-  )
+    <>
+      <Header />
+      <Routes>
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/city/:id' element={<TourDetails />}></Route>
+      </Routes>
+    </>
+  );
 }
+
+export default App;
+
 
 
 
