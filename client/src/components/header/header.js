@@ -1,13 +1,16 @@
-import React, { Component } from 'react';
-
-class Header extends Component {
-    render() { 
-        return (
-            <div>
-                <h1>Travel-Destination</h1>
-            </div>
-        );
-    }
+import "./header.css"
+import { Link } from 'react-router-dom';
+function Header(props) {
+    return (
+        <div className="head">
+            <header>         
+                <nav>
+                <Link to='/'>  Home </Link>
+                </nav>
+                <h1 className="header">Travel Destination</h1>
+            </header>
+        </div>
+    );
 }
 
 export default Header;

@@ -1,15 +1,22 @@
-import data from "../../data/db.json"
-function Tours() {
+import { Link } from 'react-router-dom';
+import Tour from './tour/tour';
+import "./tours.css"
+
+function Tours(props) {
+
     return (
-        data.map(tour => {
-            return (
-                <div>
-                    <h3>Name:{tour.name} </h3>
-                    <br />
-                    <img src={tour.image} />
-                </div>
-            )
-        })
+        <>
+            {props.data.map((meme,idx)=> {
+                return (
+                    <div className="card" key={idx}>
+                        <Link to={`/city/${meme.id}`}>
+                        <Tour tour={meme}/>
+                        </Link> 
+                    </div>
+                );
+            })}
+        </>
     );
 }
+
 export default Tours;
